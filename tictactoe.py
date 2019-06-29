@@ -315,10 +315,10 @@ class Game(object):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="A TicTacToe with a minimax AI agent. Select a play mode.")
     command_group = parser.add_mutually_exclusive_group(required=True)
-    command_group.add_argument('--one-player-o', action='store_true', help='Human vs. computer. The human is \'O\'.')
-    command_group.add_argument('--one-player-x', action='store_true', help='Human vs. computer. the human is \'X\'.')
-    command_group.add_argument('--two-player', action='store_true', help='Human vs. human')
-    command_group.add_argument('--ai-only', action='store_true', help='Computer vs. computer')
+    command_group.add_argument('--one-player-o', '-o', action='store_true', help='Human vs. computer. The human is \'O\'.')
+    command_group.add_argument('--one-player-x', '-x', action='store_true', help='Human vs. computer. the human is \'X\'.')
+    command_group.add_argument('--two-player', '-t', '-d', action='store_true', help='Human vs. human')
+    command_group.add_argument('--ai-only', '-a', '-c', action='store_true', help='Computer vs. computer')
     args = parser.parse_args()
     player1 = None
     player2 = None
@@ -337,7 +337,5 @@ if __name__ == '__main__':
     else: 
         raise Exception("Play mode argument not recognized.")
     game = Game(player1, player2)
-    # Switch out one or both human players for a RationalAgent (AI player)
-    # to test out your AI!
     game.run()
 
