@@ -12,3 +12,7 @@ optional arguments:
     * --one-player-x, -x    Human vs. computer. the human is 'X'.  
     * --two-player, -t, -d  Human vs. human  
     * --ai-only, -a, -c     Computer vs. computer  
+    
+# Mess with the code yourself!
+
+Go into terminal and type `git clone https://github.com/tchainzzz/SPCS_AI.git` and start working!
